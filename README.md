@@ -92,13 +92,13 @@ Several factual claims on this page — bar admissions, a review count, and a ye
 experience figure — are **marked `PENDING-VERIFICATION` in HTML comments** and are waiting
 on written confirmation from the firm.
 
-Seven of the eight FAQ answers are also **drafts**, marked *"Draft, pending review"* in the
-visible copy. They describe Louisiana criminal procedure and have not been reviewed by the
-attorney yet.
-
 This is an attorney advertising page. **Do not remove those markers, and do not add legal,
 statutory, or regulatory claims to it** without confirming with Infintech that the firm has
 signed off in writing. If a section looks like it is missing detail, ask before filling it in.
+
+All eight FAQ answers are Dimi's own text, copied from his design. Seven of them sit
+collapsed in his build, so they do not show up in a plain page scrape and had to be opened
+one at a time to recover. **Do not rewrite them.**
 
 ### 4. Things this mockup does not include
 
