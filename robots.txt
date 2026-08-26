@@ -1,0 +1,7 @@
+# PREVIEW ONLY — this file exists to keep the GitHub Pages preview of this
+# landing page out of search results, so it cannot compete with the real page
+# at https://www.ikerdlawcriminaldefense.co/
+#
+# DO NOT copy this file to the production server.
+User-agent: *
+Disallow: /
