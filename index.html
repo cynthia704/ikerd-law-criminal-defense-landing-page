@@ -156,8 +156,23 @@ img{max-width:100%;height:auto;display:block}
   border-bottom:1px solid rgba(255,255,255,.1)
 }
 .masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:13px;padding-bottom:13px}
-.brand{font-family:var(--serif);font-weight:700;font-size:1.06rem;color:var(--white);text-decoration:none;letter-spacing:.01em}
-.brand span{display:block;font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+/* ============================ brand lockup ============================
+   The real Ikerd logo is dark navy artwork on a transparent background, so it
+   vanishes on a navy masthead — which is why the DUI build fell back to a text
+   wordmark. Rather than white-out the file with a filter (that would flatten the
+   navy square and the silver "I" inside it into one white blob and destroy the
+   icon), the logo sits on a light chip. The artwork is untouched and the firm's
+   real mark is on the page.
+   If the client ever supplies a white/reversed version, drop it in and remove
+   the chip background.
+   ===================================================================== */
+.brand{display:inline-flex;align-items:center;text-decoration:none;line-height:0}
+.brand-chip{
+  background:var(--white);border-radius:9px;padding:8px 13px;
+  display:inline-flex;align-items:center
+}
+.brand-chip img{width:196px;height:auto;display:block}
+@media(max-width:600px){ .brand-chip{padding:6px 10px} .brand-chip img{width:150px} }
 .mast-right{display:flex;align-items:center;gap:14px}
 .mast-note{display:none;font-size:.82rem;color:#c3ceda}
 .mast-tel{color:var(--white);text-decoration:none;font-weight:700;font-size:1.02rem;white-space:nowrap}
@@ -569,7 +584,13 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
 
 <header class="masthead">
   <div class="wrap">
-    <a class="brand" href="#main">Ikerd Law Firm<span>Criminal Defense</span></a>
+    <!-- The logo artwork already carries "Criminal Defense" in its tagline, so
+         no separate sub-label is needed here. -->
+    <a class="brand" href="#main">
+      <span class="brand-chip">
+        <img src="assets/logo.png" alt="Ikerd Law Firm, Trial Attorneys" width="700" height="168">
+      </span>
+    </a>
     <div class="mast-right">
       <span class="mast-note">Free consultation</span>
       <a class="mast-tel" href="tel:+13372792748">(337)&nbsp;279-2748</a>
