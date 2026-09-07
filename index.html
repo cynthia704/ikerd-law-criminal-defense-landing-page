@@ -38,7 +38,7 @@
 <meta name="theme-color" content="#0f2238">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Criminal Defense Attorney in Lafayette, LA | Chad Ikerd">
-<meta property="og:description" content="Arrested or charged in Lafayette or Acadiana? Over 1,000 criminal cases handled. Free consultation. Call (337) 279-2748.">
+<meta property="og:description" content="Arrested or charged in Lafayette or Acadiana? Over 1,250 criminal cases handled. Free consultation. Call (337) 279-2748.">
 <meta property="og:url" content="https://www.ikerdlawcriminaldefense.co/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -381,11 +381,12 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
 .m-item span{display:block;font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;color:#a9b8c8;margin-top:3px}
 
 /* ============================ start-here cards ============================ */
-.card-lift{position:relative;transition:transform .18s ease,box-shadow .18s ease}
-.card-lift::before{
-  content:"";position:absolute;left:0;right:0;top:0;height:3px;
-  background:var(--gold);border-radius:var(--radius) var(--radius) 0 0
-}
+/* The gold rule used to be an absolutely positioned ::before pinned left:0
+   right:0. On a card with a 14px border-radius that runs straight past the
+   curve and juts out at both top corners, which is what Chad spotted. A real
+   border-top follows the radius instead, the same way the gold left border on
+   the charge cards does — the one he said looked fine. */
+.card-lift{position:relative;border-top:3px solid var(--gold);transition:transform .18s ease,box-shadow .18s ease}
 .card-lift:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(10,23,39,.13)}
 
 /* Left-aligned reading column. Dimi's first-offense section runs down the
@@ -609,7 +610,7 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
       <p class="lede">Most of the people who call this office have never been in trouble before. You will get a straight answer about what happens next, what the State has to prove, and what your options are. The first conversation is free.</p>
 
       <ul class="ticks">
-        <li><span class="tick" aria-hidden="true">&#10003;</span> Over 1,000 criminal cases handled</li>
+        <li><span class="tick" aria-hidden="true">&#10003;</span> Over 1,250 criminal cases handled</li>
         <li><span class="tick" aria-hidden="true">&#10003;</span> 200+ writs and appeals</li>
         <li><span class="tick" aria-hidden="true">&#10003;</span> Former First Assistant Chief Defender, 15th Judicial District</li>
         <!-- PENDING-VERIFICATION: review count.
@@ -740,16 +741,16 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
 <section class="marquee" aria-label="Track record">
   <div class="marquee-track">
     <div class="m-group" style="display:flex">
-      <div class="m-item"><svg class="ic"><use href="#i-folder"></use></svg><div><b>1,000+</b><span>Criminal cases handled</span></div></div>
+      <div class="m-item"><svg class="ic"><use href="#i-folder"></use></svg><div><b>1,250</b><span>Criminal cases handled</span></div></div>
       <div class="m-item"><svg class="ic"><use href="#i-scroll"></use></svg><div><b>200+</b><span>Writs and appeals</span></div></div>
-      <div class="m-item"><svg class="ic"><use href="#i-clock"></use></svg><div><b>10+ yrs</b><span>In Louisiana criminal courts</span></div></div>
+      <div class="m-item"><svg class="ic"><use href="#i-clock"></use></svg><div><b>15 yrs</b><span>Practicing in Acadiana</span></div></div>
       <div class="m-item"><svg class="ic"><use href="#i-star"></use></svg><div><b>5.0 &#9733;</b><span>Google rating, 48 reviews</span></div></div>
       <div class="m-item"><svg class="ic"><use href="#i-shield"></use></svg><div><b>LA &amp; TX</b><span>Licensed, plus federal courts</span></div></div>
     </div>
     <div class="m-group" style="display:flex" aria-hidden="true">
-      <div class="m-item"><svg class="ic"><use href="#i-folder"></use></svg><div><b>1,000+</b><span>Criminal cases handled</span></div></div>
+      <div class="m-item"><svg class="ic"><use href="#i-folder"></use></svg><div><b>1,250</b><span>Criminal cases handled</span></div></div>
       <div class="m-item"><svg class="ic"><use href="#i-scroll"></use></svg><div><b>200+</b><span>Writs and appeals</span></div></div>
-      <div class="m-item"><svg class="ic"><use href="#i-clock"></use></svg><div><b>10+ yrs</b><span>In Louisiana criminal courts</span></div></div>
+      <div class="m-item"><svg class="ic"><use href="#i-clock"></use></svg><div><b>15 yrs</b><span>Practicing in Acadiana</span></div></div>
       <div class="m-item"><svg class="ic"><use href="#i-star"></use></svg><div><b>5.0 &#9733;</b><span>Google rating, 48 reviews</span></div></div>
       <div class="m-item"><svg class="ic"><use href="#i-shield"></use></svg><div><b>LA &amp; TX</b><span>Licensed, plus federal courts</span></div></div>
     </div>
@@ -872,8 +873,8 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
     <p class="eyebrow"><svg class="ic" aria-hidden="true" style="font-size:1.05em;vertical-align:-2px;margin-right:6px"><use href="#i-hourglass"></use></svg>72 hours</p>
     <h2>The first three days decide more than the court date does.</h2>
     <div class="body-wide">
-      <p>Evidence that helps you disappears fast. Store camera footage gets overwritten. Witnesses forget. Phone records and body-cam requests have windows. And the version of events that police wrote down on night one becomes the version everyone works from unless someone challenges it early.</p>
-      <p>Bond conditions get set in the first appearance. Once they are set, changing them takes a motion and a hearing. Having a lawyer in the room, or on the phone with the court, before that happens is the difference between going home and waiting.</p>
+      <p>The evidence that helps your case disappears fast. Store camera footage gets overwritten. Witnesses forget. Phone records and body-cam footage can only be requested for a limited time. And the version of events that police wrote down on night one becomes the version everyone works from unless someone challenges it early.</p>
+      <p>Bond and its conditions get set at the first appearance. Once they are set, changing them takes a motion and a hearing. The sooner a lawyer is on the case, the sooner that motion can be filed.</p>
     </div>
 
     <div class="tl">
@@ -961,7 +962,7 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
           <span class="ic-badge"><svg class="ic"><use href="#i-siren"></use></svg></span>
           <h3>Arrest and first appearance</h3>
         </div>
-        <p>You go before a judge who tells you the charge and sets bond conditions. If a family member is in custody, this is where a lawyer can already be working on bond.</p>
+        <p>You go before a judge who tells you the charge and sets bond conditions. If the amount or the conditions are a problem, this is the point a lawyer starts working on getting them changed.</p>
       </li>
       <li>
         <div class="step-head">
@@ -999,13 +1000,13 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
     <img src="assets/chad-ikerd-desk.jpg" alt="Chad Ikerd reviewing case materials at his desk" width="640" height="800">
     <div>
       <p class="eyebrow">Who you are calling</p>
-      <h2>Chad Ikerd spent nearly a decade on the public defender side of these courtrooms. Now he is on yours.</h2>
-      <p>Before opening Ikerd Law Firm, Chad served as First Assistant Chief Defender for the 15th Judicial District, which covers Lafayette, Acadia, and Vermilion Parishes. That is where the 1,000-plus cases came from: day after day in the same courtrooms, in front of the same judges, across the table from the same prosecutors you will be facing.</p>
+      <h2>Chad Ikerd spent nine years on the public defender side of these courtrooms. Now he is on yours.</h2>
+      <p>Chad served as First Assistant Chief Defender for the 15th Judicial District, which covers Lafayette, Acadia, and Vermilion Parishes. Nine of his fifteen years in practice were full time in that office, and he has worked with it in some capacity ever since, alongside his own private cases. That is where the 1,250-plus cases came from: day after day in the same courtrooms, in front of the same judges, across the table from the same prosecutors you will be facing.</p>
       <p>That matters more than any slogan. He knows how a first-offense drug charge is typically handled in Lafayette versus Crowley. He knows which motions get traction in front of which judge. He knows the St. Landry Parish prosecutors by name, and they know him.</p>
       <ul class="card-ticks">
-        <li><span class="tick" aria-hidden="true">&#10003;</span> Over 1,000 criminal cases, misdemeanor through serious felony</li>
+        <li><span class="tick" aria-hidden="true">&#10003;</span> Over 1,250 criminal cases, misdemeanor through serious felony</li>
         <li><span class="tick" aria-hidden="true">&#10003;</span> Over 200 writs and appeals</li>
-        <li><span class="tick" aria-hidden="true">&#10003;</span> More than a decade in Louisiana criminal courts</li>
+        <li><span class="tick" aria-hidden="true">&#10003;</span> 15 years practicing in Acadiana, 9 of them full time in the 15th Judicial District</li>
         <!-- PENDING-VERIFICATION: see the Texas note in the stat band above.
              This bullet asserts admission in Texas, the Fifth Circuit and the
              U.S. Supreme Court. Confirm all three with Chad before launch. -->
@@ -1060,15 +1061,15 @@ summary:focus-visible{outline:3px solid rgba(201,162,74,.55);outline-offset:-3px
     <p class="eyebrow">A comparison</p>
     <div class="sec-head">
       <h2>&ldquo;Should I just use a public defender?&rdquo;</h2>
-      <p class="lede">Chad was one for nearly a decade. Public defenders are good lawyers. The difference is not skill. It is time. Here is what hiring your own lawyer buys you.</p>
+      <p class="lede">Chad was one for nine years. Public defenders are good lawyers. The difference is not skill. It is time. Here is what hiring your own lawyer buys you.</p>
     </div>
 
     <div class="grid g3" style="margin-top:34px">
       <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-layers"></use></svg><h3>Time on your file, not a stack of files</h3></div><p>A public defender may carry hundreds of open cases at once. Chad takes the cases he can actually work. Your case gets read, not skimmed.</p></article>
-      <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-bolt"></use></svg><h3>Starts the day you call</h3></div><p>A public defender is appointed at or after your first appearance. Chad can be working on bond, evidence, and the story before you ever stand in front of a judge.</p></article>
+      <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-bolt"></use></svg><h3>Starts the day you call</h3></div><p>A public defender is appointed at or after your first appearance. Chad can be gathering evidence and working on a bond reduction while that is still weeks away for everyone else.</p></article>
       <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-phone"></use></svg><h3>His direct line, not a switchboard</h3></div><p>You will have Chad&rsquo;s number. When something happens at 6pm on a Thursday, you are not leaving a message with an office and hoping.</p></article>
       <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-user-check"></use></svg><h3>One lawyer, start to finish</h3></div><p>The person who takes your first call is the person standing next to you at the last hearing. No handoffs, no re-explaining your situation to someone new.</p></article>
-      <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-map"></use></svg><h3>Knows your courtroom by name</h3></div><p>Nearly ten years in the 15th Judicial District and regular work in Opelousas, St. Martinville, and New Iberia. He knows the judges, the prosecutors, and what actually moves in each building.</p></article>
+      <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-map"></use></svg><h3>Knows your courtroom by name</h3></div><p>Fifteen years in Acadiana courtrooms, nine of them full time in the 15th Judicial District, plus regular work in Opelousas, St. Martinville, and New Iberia. He knows the judges, the prosecutors, and what actually moves in each building.</p></article>
       <article class="card"><div class="cmp-head"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"></use></svg><h3>You chose him. Nobody assigned him.</h3></div><p>You pick your lawyer, you know the fee before you commit, and you can ask every question you want on a free call first. That is a very different starting point.</p></article>
     </div>
 
